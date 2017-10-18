@@ -11,7 +11,7 @@ RUN chmod +x /usr/bin/fwatchdog
 
 RUN git clone https://github.com/JockDaRock/TekDefense-Automater
 
-RUN cp TekDefense-Automater /root
+RUN cp -r TekDefense-Automater /root
 
 WORKDIR /root/
 
