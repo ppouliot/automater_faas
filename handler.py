@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # print(st)
     with stdoutIO() as s:
         try:
-            """tmpfold = os.getenv("TMPDIR", "/tmp")
+            tmpfold = os.getenv("TMPDIR", "/tmp")
             tmpfile = "%s/%s" % (tmpfold, "url_ip_info")
             # print(tmpfile)
             f = open(tmpfile, 'w')
@@ -36,7 +36,7 @@ if __name__ == "__main__":
             p1 = subprocess.Popen(["python3", "Automater.py", st], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             p2 = p1.stdout.read().decode('utf-8') + "\r\n\r\n" + p1.stderr.read().decode('utf-8')
 
-            print(p2)"""
+            #print(p2)
             print("Is anything working???????")
         except BaseException as e:
             print(e)
