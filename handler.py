@@ -32,13 +32,13 @@ if __name__ == "__main__":
             # print(tmpfile)
             f = open(tmpfile, 'w')
             print(st, file=f)
-            f.close()"""
+            f.close()
             p1 = subprocess.Popen(["python3", "Automater.py", st], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             p2 = p1.stdout.read().decode('utf-8') + "\r\n\r\n" + p1.stderr.read().decode('utf-8')
 
-            print(p2)
+            print(p2)"""
+            print("Is anything working???????")
         except BaseException as e:
             print(e)
-    #print(s.getvalue())
-    print("Something good, maybe???")
+    print(s.getvalue())
 
