@@ -1,7 +1,9 @@
-FROM python:alpine
+FROM alpine
 
-RUN apk update \
-    && apk add git
+RUN apk add -Uuv --no-cache python3 \
+    && apk upgrade -v --available --no-cache \
+    && apk add ca-certificates && pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && pip install requests certifi
 
 ADD https://github.com/alexellis/faas/releases/download/0.5.8-alpha/fwatchdog /usr/bin
 
