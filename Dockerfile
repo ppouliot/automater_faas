@@ -21,6 +21,8 @@ RUN pip3 install -r requirements.txt
 COPY handler.py .
 
 ENV fprocess="python3 handler.py"
+ENV read_timeout="60"
+ENV write_timeout="60"
 
 HEALTHCHECK --interval=1s CMD [ -e /tmp/.lock ] || exit 1
 
