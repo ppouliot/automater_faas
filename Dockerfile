@@ -11,8 +11,6 @@ WORKDIR /root/
 
 RUN git clone https://github.com/JockDaRock/TekDefense-Automater
 
-WORKDIR /root/TekDefense-Automater
-
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
