@@ -9,9 +9,11 @@ ADD https://github.com/alexellis/faas/releases/download/0.5.8-alpha/fwatchdog /u
 
 RUN chmod +x /usr/bin/fwatchdog
 
-WORKDIR /root/
-
 RUN git clone https://github.com/JockDaRock/TekDefense-Automater
+
+RUN cp TekDefense-Automater /root
+
+WORKDIR /root/
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
