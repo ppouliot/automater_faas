@@ -1,8 +1,7 @@
 FROM python:alpine
 
 RUN apk update \
-    && apk add git \
-    && pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && apk add git
 
 ADD https://github.com/alexellis/faas/releases/download/0.5.8-alpha/fwatchdog /usr/bin
 
