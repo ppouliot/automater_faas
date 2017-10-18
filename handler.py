@@ -39,5 +39,6 @@ if __name__ == "__main__":
             print(p2)
         except BaseException as e:
             print(e)
-    print(s.getvalue())
+    #print(s.getvalue())
+    print("Something good, maybe???")
 
