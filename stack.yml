@@ -1,0 +1,13 @@
+provider:
+  name: faas
+  gateway: http://172.20.230.78:8080
+
+functions:
+  automater:
+    lang: dockerfile
+    handler: .
+    fprocess: python handler.py
+    image: ppouliot/automater_faas:latest
+    environment:
+      read_timeout: "60"
+      write_timeout: "60"
